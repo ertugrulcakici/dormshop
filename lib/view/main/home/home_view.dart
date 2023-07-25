@@ -6,6 +6,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: _body(),
     );
   }
@@ -21,4 +22,5 @@ class HomeView extends StatelessWidget {
   Widget _map() {
     return const SizedBox();
   }
+
 }
