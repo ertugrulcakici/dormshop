@@ -26,4 +26,21 @@ class ItemAdModel {
     required this.createdAt,
     required this.messageBoxUidList,
   });
+
+  factory ItemAdModel.test() {
+    return ItemAdModel(
+      uid: 'uid',
+      ownerUid: 'ownerUid',
+      title: 'title',
+      description: 'description',
+      images: ['images'],
+      thumbnailImages: ['thumbnailImages'],
+      isActive: true,
+      price: 1000,
+      dormitoryUid: 'dormitoryUid',
+      savedCount: 0,
+      createdAt: DateTime.now(),
+      messageBoxUidList: ['messageBoxUidList'],
+    );
+  }
 }

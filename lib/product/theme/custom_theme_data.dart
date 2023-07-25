@@ -21,6 +21,8 @@ final class _ColorThemeData {
   final Color darkblueColor = const Color(0xFF4888FE);
   final Color inputTextColor = const Color(0xFF585858);
   final Color backgroundColor = const Color(0xFFD7E5FF);
+  final Color white = const Color(0xFFFFFFFF);
+  final Color black = const Color(0xFF000000);
 }
 
 @immutable

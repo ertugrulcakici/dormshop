@@ -8,6 +8,9 @@ class SplashView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    Future.delayed(const Duration(seconds: 1), () {
+      NavigationService.navigateToView(const HomeView());
+    });
     return Scaffold(
       body: Center(
         child: TextButton(
