@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 
 @immutable
 final class AppThemeData {
-  static final ThemeData light = ThemeData.from(
-    colorScheme:
-        ColorScheme.fromSeed(seedColor: CustomThemeData.colors.primaryColor),
-    textTheme: TextTheme(titleLarge: CustomThemeData.fonts.title),
-    useMaterial3: true,
+  static final ThemeData light = ThemeData(
+    scaffoldBackgroundColor: CustomThemeData.colors.backgroundColor,
+    primaryColor: CustomThemeData.colors.darkblueColor,
+    bottomAppBarTheme:
+        BottomAppBarTheme(color: CustomThemeData.colors.darkblueColor),
+    colorScheme: ColorScheme.light(
+      primary: CustomThemeData.colors.darkblueColor,
+      secondary: CustomThemeData.colors.lightblueColor,
+    ),
   );
 }
