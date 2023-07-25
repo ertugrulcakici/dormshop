@@ -6,9 +6,21 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeView'),
-      ),
+
+      body: _body(),
     );
   }
+
+  Widget _body() {
+    return Column(
+      children: [
+        _map(),
+      ],
+    );
+  }
+
+  Widget _map() {
+    return const SizedBox();
+  }
+
 }
