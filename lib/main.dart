@@ -1,11 +1,13 @@
 import 'package:dormshop/core/service/navigaton/navigaton_service.dart';
+import 'package:dormshop/product/constant/app_constants.dart';
 import 'package:dormshop/product/theme/app_theme_data.dart';
-import 'package:dormshop/view/auth/splash/splash_view.dart';
+import 'package:dormshop/view/main/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main(List<String> args) {
+void main(List<String> args) async {
+  await initApp();
   runApp(const App());
 }
 
@@ -16,15 +18,20 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return ProviderScope(
       child: ScreenUtilInit(
-        designSize: const Size(430, 932),
+        designSize:
+            const Size(AppConstants.designWidth, AppConstants.designHeight),
         builder: (context, child) => child!,
         child: MaterialApp(
           title: 'Dorm Shop',
           theme: AppThemeData.light,
           navigatorKey: NavigationService.navigatorKey,
-          home: const SplashView(),
+          home: const HomeView(),
         ),
       ),
     );
   }
+}
+
+Future<void> initApp() async {
+  WidgetsFlutterBinding.ensureInitialized();
 }

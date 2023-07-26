@@ -1,3 +1,4 @@
+import 'package:dormshop/core/utils/extensions/ui_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,6 +7,35 @@ import 'package:google_fonts/google_fonts.dart';
 final class CustomThemeData {
   static final colors = _ColorThemeData.instance;
   static final fonts = _FontThemeData.instance;
+  static final ui = _UIThemeData.instance;
+}
+
+@immutable
+final class _UIThemeData {
+  static _UIThemeData? _instance;
+  static _UIThemeData get instance => _instance ??= _UIThemeData._();
+  _UIThemeData._();
+
+  // borders
+  late final double borderRadiusSize = 13;
+  BorderRadius get borderRadius => BorderRadius.circular(borderRadiusSize);
+
+  // paddings
+  late final double pagePaddingHSize = 15.smw;
+  EdgeInsets get pagePaddingH =>
+      EdgeInsets.symmetric(vertical: pagePaddingHSize);
+
+  late final double pagePaddingWSize = 15.smh;
+  EdgeInsets get pagePaddingW =>
+      EdgeInsets.symmetric(horizontal: pagePaddingWSize);
+
+  // margins
+  final double pageMarginWSize = 15.smw;
+  EdgeInsets get pageMarginW =>
+      EdgeInsets.symmetric(horizontal: pageMarginWSize);
+
+  final double pageMarginHSize = 15.smh;
+  EdgeInsets get pageMarginH => EdgeInsets.symmetric(vertical: pageMarginHSize);
 }
 
 @immutable

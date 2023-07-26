@@ -4,7 +4,7 @@ class ItemAdModel {
   final String title;
   final String description;
   final List<String> images;
-  final List<String> thumbnailImages;
+  final String thumbnailUrl;
   bool isActive;
   double price;
   final String dormitoryUid;
@@ -18,7 +18,7 @@ class ItemAdModel {
     required this.title,
     required this.description,
     required this.images,
-    required this.thumbnailImages,
+    required this.thumbnailUrl,
     required this.isActive,
     required this.price,
     required this.dormitoryUid,
@@ -33,10 +33,13 @@ class ItemAdModel {
       ownerUid: 'ownerUid',
       title: 'title',
       description: 'description',
-      images: ['images'],
-      thumbnailImages: ['thumbnailImages'],
+      images: [
+        'https://picsum.photos/100/100',
+        'https://picsum.photos/100/100'
+      ],
+      thumbnailUrl: "https://picsum.photos/100/100",
       isActive: true,
-      price: 1000,
+      price: 1000.1,
       dormitoryUid: 'dormitoryUid',
       savedCount: 0,
       createdAt: DateTime.now(),
