@@ -1,5 +1,5 @@
 import 'package:dormshop/core/utils/extensions/ui_extensions.dart';
-import 'package:dormshop/product/components/background.dart';
+import 'package:dormshop/product/components/background_widget.dart';
 import 'package:dormshop/product/model/item_ad_model.dart';
 import 'package:dormshop/product/theme/custom_theme_data.dart';
 import 'package:flutter/material.dart';

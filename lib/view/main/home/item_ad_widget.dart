@@ -30,33 +30,49 @@ class _ItemAdWidget extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: CustomThemeData.ui.borderRadius,
-                child: Image.network(
-                  item.thumbnailUrl,
-                  fit: BoxFit.cover,
-                  height: 120.smh,
-                  width: 120.smh,
-                  loadingBuilder: (context, child, loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return CircularProgressIndicator(
-                      value: loadingProgress.expectedTotalBytes != null
-                          ? loadingProgress.cumulativeBytesLoaded /
-                              loadingProgress.expectedTotalBytes!
-                          : null,
-                    );
-                  },
+                child: Hero(
+                  // todo: add tag to itemAd detail page
+                  tag: item.uid,
+                  child: Image.network(
+                    item.thumbnailUrl,
+                    fit: BoxFit.cover,
+                    height: 120.smh,
+                    width: 120.smh,
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes!
+                            : null,
+                      );
+                    },
+                  ),
                 ),
               ),
               RotatedBox(
                   quarterTurns: 1,
-                  child: Text("${item.price.toStringAsFixed(2)}€",
+                  child: Text(
+                      item.price == 0
+                          ? "Free"
+                          : "${item.price.toStringAsFixed(2)}€",
                       style: CustomThemeData.fonts.adPriceText
                           .copyWith(color: CustomThemeData.colors.black))),
             ],
           ),
-          Text(item.title, style: CustomThemeData.fonts.adTitle),
-          Text(item.description,
-              style: CustomThemeData.fonts.adDescription
-                  .copyWith(color: CustomThemeData.colors.black)),
+          Text(
+            item.title,
+            style: CustomThemeData.fonts.adTitle,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+          Expanded(
+            child: Text(item.description,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: CustomThemeData.fonts.adDescription
+                    .copyWith(color: CustomThemeData.colors.black)),
+          ),
         ],
       ),
     );
