@@ -105,6 +105,10 @@
 				0AF51DBAB3ED5D09B758F1D5 /* Pods-RunnerTests.release.xcconfig */,
 				572F4D8AF49FC35774677D94 /* Pods-RunnerTests.profile.xcconfig */,
 			);
+<<<<<<< HEAD
+=======
+			name = Pods;
+>>>>>>> c1569a7907862985177c82095065467807f9b1fa
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -480,7 +484,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ertugrulcakici.dormshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				PROVISIONING_PROFILE_SPECIFIER = "";
+=======
+>>>>>>> c1569a7907862985177c82095065467807f9b1fa
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -668,7 +675,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ertugrulcakici.dormshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				PROVISIONING_PROFILE_SPECIFIER = "";
+=======
+>>>>>>> c1569a7907862985177c82095065467807f9b1fa
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -700,7 +710,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ertugrulcakici.dormshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				PROVISIONING_PROFILE_SPECIFIER = "";
+=======
+>>>>>>> c1569a7907862985177c82095065467807f9b1fa
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
