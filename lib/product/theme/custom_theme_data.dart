@@ -17,15 +17,15 @@ final class _UIThemeData {
   _UIThemeData._();
 
   // borders
-  late final double borderRadiusSize = 13;
+  final double borderRadiusSize = 13;
   BorderRadius get borderRadius => BorderRadius.circular(borderRadiusSize);
 
   // paddings
-  late final double pagePaddingHSize = 15.smw;
+  final double pagePaddingHSize = 15.smw;
   EdgeInsets get pagePaddingH =>
       EdgeInsets.symmetric(vertical: pagePaddingHSize);
 
-  late final double pagePaddingWSize = 15.smh;
+  final double pagePaddingWSize = 15.smh;
   EdgeInsets get pagePaddingW =>
       EdgeInsets.symmetric(horizontal: pagePaddingWSize);
 
