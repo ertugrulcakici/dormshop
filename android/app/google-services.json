@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "492447400415",
+    "firebase_url": "https://dormshop-fd907-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "dormshop-fd907",
+    "storage_bucket": "dormshop-fd907.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492447400415:android:84d6931cf413698a1d046a",
+        "android_client_info": {
+          "package_name": "ertugrulcakici.dormshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492447400415-pl3tl2cj88lmvppk5fo7hafumm4fi2pp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbHq8ivcpZPm49n-wjoQTF5R9hvsK3Wac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492447400415-pl3tl2cj88lmvppk5fo7hafumm4fi2pp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "492447400415-q7iqvc0mka3m6blm9ntcbth125d8t89g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ertugrulcakici.dormshop"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
