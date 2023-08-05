@@ -11,10 +11,12 @@ class BackgroundWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: AppConstants.designHeight,
-      width: AppConstants.designWidth,
-      child: _background(context),
+    return Scaffold(
+      body: SizedBox(
+        height: AppConstants.designHeight,
+        width: AppConstants.designWidth,
+        child: _background(context),
+      ),
     );
   }
 
@@ -46,8 +48,9 @@ class BackgroundWidget extends StatelessWidget {
         // foreground page
         Padding(
           padding: EdgeInsets.only(
-              top: MediaQuery.paddingOf(context).top,
-              bottom: MediaQuery.of(context).padding.bottom),
+            top: MediaQuery.paddingOf(context).top,
+            // bottom: MediaQuery.of(context).padding.bottom
+          ),
           child: child,
         )
       ],

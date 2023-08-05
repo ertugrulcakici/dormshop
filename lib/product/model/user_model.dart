@@ -1,33 +1,67 @@
-final class UserModel {
-  final String uid;
-  final String firebaseUid;
-  final String username;
-  final String email;
-  String defaultDormUid;
-  String phoneNumber;
-  String activeItemAdCount;
-  String inactiveItemAdCount;
-  final DateTime registeredAt;
-  List<String> savedItems;
-  List<String> savedDormitories;
-  int countryId;
-  int cityId;
-  List<String> messageBoxUidList;
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
-  UserModel({
+class UserModel {
+  final String uid;
+  final String displayName;
+  final String email;
+  String? defaultDormUid;
+  String? phoneNumber;
+  late int activeItemAdCount;
+  late int inactiveItemAdCount;
+  late final int registeredAt;
+  late final List<String> savedItems;
+  late final List<String> savedDormitories;
+  int? countryId;
+  int? cityId;
+  late final List<String> messageBoxUidList;
+
+  UserModel.newAccount({
     required this.uid,
-    required this.firebaseUid,
-    required this.username,
+    required this.displayName,
     required this.email,
-    required this.defaultDormUid,
-    required this.phoneNumber,
-    required this.activeItemAdCount,
-    required this.inactiveItemAdCount,
-    required this.registeredAt,
-    required this.savedItems,
-    required this.savedDormitories,
-    required this.countryId,
-    required this.cityId,
-    required this.messageBoxUidList,
-  });
+  }) {
+    defaultDormUid = null;
+    phoneNumber = null;
+    activeItemAdCount = 0;
+    inactiveItemAdCount = 0;
+    registeredAt = DateTime.now().millisecondsSinceEpoch;
+    savedItems = [];
+    savedDormitories = [];
+    messageBoxUidList = [];
+    cityId = null;
+    countryId = null;
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'uid': uid,
+      'displayName': displayName,
+      'email': email,
+      'defaultDormUid': defaultDormUid,
+      'phoneNumber': phoneNumber,
+      'activeItemAdCount': activeItemAdCount,
+      'inactiveItemAdCount': inactiveItemAdCount,
+      'registeredAt': registeredAt,
+      'savedItems': savedItems,
+      'savedDormitories': savedDormitories,
+      'countryId': countryId,
+      'cityId': cityId,
+      'messageBoxUidList': messageBoxUidList,
+    };
+  }
+
+  UserModel.fromMap(Map<String, dynamic> map)
+      : uid = map['uid'],
+        displayName = map['displayName'],
+        email = map['email'],
+        defaultDormUid = map['defaultDormUid'],
+        phoneNumber = map['phoneNumber'],
+        activeItemAdCount = map['activeItemAdCount'],
+        inactiveItemAdCount = map['inactiveItemAdCount'],
+        registeredAt = map['registeredAt'],
+        savedItems = List<String>.from(map['savedItems']),
+        savedDormitories = List<String>.from(map['savedDormitories']),
+        countryId = map['countryId'],
+        cityId = map['cityId'],
+        messageBoxUidList = List<String>.from(map['messageBoxUidList']);
 }

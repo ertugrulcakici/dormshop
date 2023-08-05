@@ -9,13 +9,13 @@ class SplashView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     Future.delayed(const Duration(seconds: 1), () {
-      NavigationService.navigateToView(const HomeView());
+      NavigationService.toPage(const HomeView());
     });
     return Scaffold(
       body: Center(
         child: TextButton(
             onPressed: () {
-              NavigationService.navigateToView(const HomeView());
+              NavigationService.toPage(const HomeView());
             },
             child: const Text("Splash")),
       ),

@@ -1,7 +1,7 @@
 import 'package:dormshop/core/service/navigaton/navigaton_service.dart';
 import 'package:dormshop/product/constant/app_constants.dart';
 import 'package:dormshop/product/theme/app_theme_data.dart';
-import 'package:dormshop/view/auth/login/login_view.dart';
+import 'package:dormshop/view/main/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +26,7 @@ class App extends StatelessWidget {
           title: 'Dorm Shop',
           theme: AppThemeData.light,
           navigatorKey: NavigationService.navigatorKey,
-          home: const LoginView(),
+          home: const HomeView(),
         ),
       ),
     );

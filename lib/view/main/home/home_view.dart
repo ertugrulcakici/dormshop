@@ -1,5 +1,7 @@
+import 'package:dormshop/core/service/navigaton/navigaton_service.dart';
 import 'package:dormshop/core/utils/extensions/ui_extensions.dart';
 import 'package:dormshop/product/components/background_widget.dart';
+import 'package:dormshop/product/enum/image_assets.dart';
 import 'package:dormshop/product/model/item_ad_model.dart';
 import 'package:dormshop/product/theme/custom_theme_data.dart';
 import 'package:flutter/material.dart';
@@ -12,13 +14,23 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      extendBody: false,
+      bottomNavigationBar: _bottomBar(context),
       body: BackgroundWidget(child: _body()),
     );
   }
 
   Widget _body() {
     return Column(
-      children: [_map(), _itemAdList()],
+      children: [
+        _map(),
+        _itemAdList(),
+      ],
     );
   }
 
@@ -52,5 +64,40 @@ class HomeView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _bottomBar(BuildContext context) {
+    Widget _bottomBarItem(
+        {required ImageAssets iconPath, required WidgetBuilder widgetBuilder}) {
+      return InkWell(
+        onTap: () {
+          NavigationService.toPage(widgetBuilder(context));
+        },
+        child: Image.asset(iconPath.assetPath, height: 50.smh),
+      );
+    }
+
+    return BottomAppBar(
+        height: 50.smh,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            _bottomBarItem(
+                iconPath: ImageAssets.home,
+                widgetBuilder: (context) => const HomeView()),
+            _bottomBarItem(
+                iconPath: ImageAssets.search,
+                widgetBuilder: (context) => const HomeView()),
+            _bottomBarItem(
+                iconPath: ImageAssets.add,
+                widgetBuilder: (context) => const HomeView()),
+            _bottomBarItem(
+                iconPath: ImageAssets.notification,
+                widgetBuilder: (context) => const HomeView()),
+            _bottomBarItem(
+                iconPath: ImageAssets.add,
+                widgetBuilder: (context) => const HomeView()),
+          ],
+        ));
   }
 }
