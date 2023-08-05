@@ -15,7 +15,7 @@ final class NavigationService {
 
   static final BuildContext? context = navigatorKey.currentContext;
 
-  static Future navigateToView(Widget view) async {
+  static Future toPage(Widget view) async {
     if (!Platform.isAndroid) {
       await navigatorKey.currentState!.push(
         MaterialPageRoute(
@@ -27,6 +27,24 @@ final class NavigationService {
         CupertinoPageRoute(
           builder: (context) => view,
         ),
+      );
+    }
+  }
+
+  static Future toPageAndRemoveUntil(Widget view) async {
+    if (!Platform.isAndroid) {
+      await navigatorKey.currentState!.pushAndRemoveUntil(
+        MaterialPageRoute(
+          builder: (context) => view,
+        ),
+        (route) => false,
+      );
+    } else {
+      await navigatorKey.currentState!.pushAndRemoveUntil(
+        CupertinoPageRoute(
+          builder: (context) => view,
+        ),
+        (route) => false,
       );
     }
   }
