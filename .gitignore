@@ -46,3 +46,4 @@ app.*.map.json
 /lib/firebase_options.dart
 /lib/product/constant/app_constants.dart
 /ios/Runner/GoogleService-Info.plist
+ios/Runner.xcodeproj/project.pbxproj
