@@ -11,16 +11,16 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(left: 30, right: 30, top: 20),
+        padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
         child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(13),
-              color: CustomThemeData.colors.whiteColor,
+              color: CustomThemeData.colors.white,
               boxShadow: [
                 BoxShadow(
                   color: CustomThemeData.colors.inputTextColor.withOpacity(0.3),
                   blurRadius: 10,
-                  offset: Offset(0, 10),
+                  offset: const Offset(0, 10),
                 )
               ],
             ),
@@ -57,7 +57,7 @@ class CustomButton extends StatelessWidget {
             Text(
               text,
               style: CustomThemeData.fonts.containerText
-                  .copyWith(color: CustomThemeData.colors.whiteColor),
+                  .copyWith(color: CustomThemeData.colors.white),
             ),
             Image.asset(
               "$icon",

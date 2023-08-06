@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
         color: CustomThemeData.colors.darkblueColor,
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
+        padding: EdgeInsets.symmetric(vertical: 4, horizontal: 15),
         child: Row(
           children: [
             Text(
@@ -27,6 +27,7 @@ class CustomButton extends StatelessWidget {
               style: CustomThemeData.fonts.containerText
                   .copyWith(color: CustomThemeData.colors.white),
             ),
+            const SizedBox(width: 5),
             Image.asset(
               imageAssetPath,
               width: 25,

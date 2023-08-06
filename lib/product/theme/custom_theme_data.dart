@@ -53,6 +53,8 @@ final class _ColorThemeData {
   final Color backgroundColor = const Color(0xFFD7E5FF);
   final Color white = const Color(0xFFFFFFFF);
   final Color black = const Color(0xFF000000);
+
+  get r => null;
 }
 
 @immutable
