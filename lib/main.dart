@@ -1,5 +1,4 @@
 import 'package:dormshop/core/service/navigaton/navigaton_service.dart';
-import 'package:dormshop/product/constant/app_constants.dart';
 import 'package:dormshop/product/theme/app_theme_data.dart';
 import 'package:dormshop/view/main/home/home_view.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -8,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'firebase_options.dart';
+import 'product/constants/app_constants.dart';
 
 void main(List<String> args) async {
   await initApp();

@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import '../../../../product/constant/app_constants.dart';
+import '../../../../product/constants/app_constants.dart';
 import '../../../../product/model/user_model.dart';
 import '../../../../view/auth/login/login_view.dart';
 import '../../../../view/auth/user_setup/user_setup_view.dart';

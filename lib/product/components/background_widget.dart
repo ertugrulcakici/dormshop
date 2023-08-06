@@ -1,7 +1,7 @@
 import 'package:dormshop/core/utils/extensions/ui_extensions.dart';
-import 'package:dormshop/product/constant/app_constants.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/app_constants.dart';
 import '../theme/custom_theme_data.dart';
 
 @immutable

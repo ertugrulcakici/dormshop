@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import '../../../product/constant/app_constants.dart';
+import '../../../product/constants/app_constants.dart';
 import '../../service/navigaton/navigaton_service.dart';
 
 extension UIExtension on num {

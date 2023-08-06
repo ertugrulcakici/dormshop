@@ -1,6 +1,7 @@
-import 'package:dormshop/product/components/app_components.dart';
 import 'package:dormshop/product/theme/custom_theme_data.dart';
 import 'package:flutter/material.dart';
+
+import '../../../product/components/custom_text_field.dart';
 
 class SigninView extends StatefulWidget {
   const SigninView({super.key});
@@ -41,17 +42,17 @@ class _SigninViewState extends State<SigninView> {
                 child: Text(
                   "Register",
                   style: CustomThemeData.fonts.largeText
-                      .copyWith(color: CustomThemeData.colors.whiteColor),
+                      .copyWith(color: CustomThemeData.colors.white),
                 ),
               ),
               SizedBox(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomTextField(hintText: "Name"),
-                    CustomTextField(hintText: "E-Mail"),
-                    CustomTextField(hintText: "Password"),
-                    CustomTextField(hintText: "Confirm Password"),
+                    const CustomTextField(hintText: "Name"),
+                    const CustomTextField(hintText: "E-Mail"),
+                    const CustomTextField(hintText: "Password"),
+                    const CustomTextField(hintText: "Confirm Password"),
                     Row(
                       children: [
                         Text(
