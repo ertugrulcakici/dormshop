@@ -7,7 +7,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import '../../../../product/constant/app_constants.dart';
 import '../../../../product/model/user_model.dart';
 import '../../../../view/auth/login/login_view.dart';
-import '../../../../view/auth/user_setup_view.dart';
+import '../../../../view/auth/user_setup/user_setup_view.dart';
 import '../../../../view/main/home/home_view.dart';
 import '../../navigaton/navigaton_service.dart';
 
